@@ -1,4 +1,7 @@
 package com.dining.Review.repository;
 
-public interface DishesRepository {
+import com.dining.Review.entities.Dishes;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface DishesRepository extends JpaRepository<Dishes, Integer> {
 }

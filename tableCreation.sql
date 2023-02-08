@@ -6,11 +6,6 @@ create table people (
     dish_rating BIGINT NOT NULL
 );
 
-create table orders (
-    id BIGINT NOT NULL PRIMARY KEY,
-    dish_id BIGINT NOT NULL
-);
-
 create table dishes (
     id BIGINT NOT NULL PRIMARY KEY,
     dish_name BIGINT NOT NULL,
