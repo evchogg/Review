@@ -1,10 +1,7 @@
 package com.dining.Review.entities;
 
-import com.dining.Review.repository.DishesRepository;
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "people")

@@ -3,7 +3,6 @@ package com.dining.Review.entities;
 //import com.sun.javafx.beans.IDProperty;
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -37,4 +36,7 @@ public class  Dishes {
     public void setDishOverallRating(Integer dishOverallRating) {
         this.dishOverallRating = dishOverallRating;
     }
+
+    @OneToMany(mappedBy = "dishes")
+    private List<People> peopleList;
 }
