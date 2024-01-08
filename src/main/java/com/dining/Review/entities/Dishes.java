@@ -11,6 +11,7 @@ public class  Dishes {
 
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     public Integer getId() {
         return id;

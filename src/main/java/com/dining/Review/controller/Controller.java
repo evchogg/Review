@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin("http://localhost:8081/")
 public class Controller {
 
     private final PeopleRepository peopleRepository;
@@ -51,6 +52,11 @@ public class Controller {
         this.dishesRepository.delete(deletedDish);
         return String.format("Dish with ID:%s is deleted", id);
 
+    }
+
+    @GetMapping("/searchdishes")
+    public Iterable<Dishes> getDishes() {
+        return this.dishesRepository.findAll();
     }
 
     @GetMapping("/searchpeople")
